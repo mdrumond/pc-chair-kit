@@ -76,6 +76,31 @@ python3 report_to_csv OUT_REPORT_CSV OUT_HOTCRP_CSV
 You can upload this conflicts from the `Assignment` page in HotCRP.
 
 ## Paper assignments
+Paper assignment is a dificult task because both PC members and paper authors are inconsistent when listing their topics of interest. We build some infrastructure to aid in this task.
+
+The script `paper_affinity.py` generates affinity reports based on an expertise DB and the number of citation made from paper to PC members. The intuition is that papers that cite a particular PC member a lot should be reviewed by that PC member. 
+
+With the citation report, run:
+```bash
+python3 paper_affinity.py --paper-prefix PREFIX  --expertise-db EXPERTISE_DB --paper-json PAPER_DATA --pc-csv PC_INFO --expertise-to-topics EXPERTISE_TO_TOPICS --citation-report CITATION_REPORT
+```
+Where:
+* **PREFIX** Prefix of the paper names
+* **EXPERTISE_DB** list of authors expertises in the format:
+```
+id,First Name,Last Name,email,[comma separated list of expertises]
+id1,PCMcmberFirstName1,PCMcmberLastName1,email,[list of expertises with `1` if the pc member is an expert and nothing otherwhise
+```
+
+* **PAPER_DATA** The `.json` file you donwloaded and cleaned with the paper info.
+* **PC_INFO** The `.csv` file you you downloaded and cleaned with the PC info
+* **EXPERTISE_TO_TOPICS** A file that maps PC expertise to paper topics, in case they differ. An expertise can map to one or more topic, and a single topic can map to many expertises. This file has the format:
+```
+Expertise,Topic,,,,,,,,,,,
+Expertise1,Topic1,Topic2,Topic3
+```
+
+* **CITATION_REPORT** Folder where the citation report was generated.
 
 ## Nagging your PC members
 
