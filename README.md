@@ -81,6 +81,7 @@ Paper assignment is a dificult task because both PC members and paper authors ar
 The script `paper_affinity.py` generates affinity reports based on an expertise DB and the number of citation made from paper to PC members. The intuition is that papers that cite a particular PC member a lot should be reviewed by that PC member. 
 
 #### Generating the citation reports
+
 First you have to generate a citation report. You will need to download `pdftotext` to do so. After you downloaded `pdftotext`, download all the pdfs from HotCRP and place them on a folder `PDF_FOLDER`. Copy the contents of `WordCnt_And_Reference_Logger` to `PDF_FOLDER` and, from that folder run:
 ```
 ./wordscript.sh
@@ -90,16 +91,14 @@ First you have to generate a citation report. You will need to download `pdftote
 
 With the citation report, run:
 ```bash
-python3 paper_affinity.py --paper-prefix PREFIX  --expertise-db EXPERTISE_DB --paper-json PAPER_DATA --pc-csv PC_INFO --expertise-to-topics EXPERTISE_TO_TOPICS --citation-report CITATION_REPORT
+python3 paper_affinity.py --expertise-db EXPERTISE_DB --paper-json PAPER_DATA --pc-csv PC_INFO --expertise-to-topics EXPERTISE_TO_TOPICS --submissions PDF_FOLDER --out-pc-topics OUT_PC_TOPICS --out-pc-citations OUT_PC_CITATIONS --out-affinity OUT_AFFINITY
 ```
 Where:
-* **PREFIX** Prefix of the paper names
 * **EXPERTISE_DB** list of authors expertises in the format:
 ```
 id,First Name,Last Name,email,[comma separated list of expertises]
 id1,PCMcmberFirstName1,PCMcmberLastName1,email,[list of expertises with `1` if the pc member is an expert and nothing otherwhise
 ```
-
 * **PAPER_DATA** The `.json` file you donwloaded and cleaned with the paper info.
 * **PC_INFO** The `.csv` file you you downloaded and cleaned with the PC info
 * **EXPERTISE_TO_TOPICS** A file that maps PC expertise to paper topics, in case they differ. An expertise can map to one or more topic, and a single topic can map to many expertises. This file has the format:
@@ -107,11 +106,16 @@ id1,PCMcmberFirstName1,PCMcmberLastName1,email,[list of expertises with `1` if t
 Expertise,Topic,,,,,,,,,,,
 Expertise1,Topic1,Topic2,Topic3
 ```
-
-* **CITATION_REPORT** Folder where the citation report was generated.
+* **PDF_FOLDER** Folder where papers are located
+* **OUT_PC_TOPICS** PC topic reports.
+* **OUT_PC_CITATIONS** PC citation reports.
+* **OUT_AFFINITY** PC affinity reports.
 
 ## Nagging your PC members
+TBA
 
 ## Managing the PC meeting
+TBA
 
 ## COIs for TOT Award.
+TBA
