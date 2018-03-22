@@ -56,15 +56,16 @@ python3 cross_reference_conflcits.py INSTITUTIONS_CSV PAPER_DATA PC_INFO PC_PAPE
 ```
 
 This scripts takes the following inputs:
-* *INSTITUTIONS_CSV* 
-* *PAPER_DATA* 
-* *PC_INFO*
-* *PC_PAPERS*
-* *OUT_PROPER_CONFLICTS*
-* *PAPER_COLLABS_FIELD_CONFLICTS*
-* *PC_COLLABS_FIELD_CONFLICTS*
-* *DBLP_COLLABS_FIELD_CONFLICTS*
-* *SUSPICIOUS_CONFLICTS*
+* **INSTITUTIONS_CSV** CSV file with list of institutions and their aliases. We added ours to this repo, in `data/institutions.csv`, and you can add institutions to that file as you see fit.
+* **PAPER_DATA** The `.json` file you donwloaded and cleaned with the paper info.
+* **PC_INFO** The `.csv` file you you downloaded and cleaned with the PC info
+* **PC_PAPERS** The `.csv` file you generated and filtered with the list of PC papers.
+* **OUT_PROPER_CONFLICTS** The output file with the proper conflicts (the conflicts flagged by authors in the submission form.
+* **PAPER_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected by checking the paper collabs field of the submission
+* **PC_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected by checking the paper collabs field of the PCs
+* **DBLP_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected through DBLP
+* **SUSPICIOUS_CONFLICTS** The output file with conflicts that are flagged by authors but can't be checked elsewhere
+
 
 ## Paper assignments
 
