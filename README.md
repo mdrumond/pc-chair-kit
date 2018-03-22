@@ -80,6 +80,8 @@ Paper assignment is a dificult task because both PC members and paper authors ar
 
 The script `paper_affinity.py` generates affinity reports based on an expertise DB and the number of citation made from paper to PC members. The intuition is that papers that cite a particular PC member a lot should be reviewed by that PC member. 
 
+First you have to generate a citation report. You will need to download `pdftotext` to do so. After you downloaded `pdftotext`, download all the pdfs from HotCRP.
+
 With the citation report, run:
 ```bash
 python3 paper_affinity.py --paper-prefix PREFIX  --expertise-db EXPERTISE_DB --paper-json PAPER_DATA --pc-csv PC_INFO --expertise-to-topics EXPERTISE_TO_TOPICS --citation-report CITATION_REPORT
