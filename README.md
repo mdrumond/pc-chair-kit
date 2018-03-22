@@ -1,6 +1,8 @@
 # PC Chair Kit
 This is a kit to make PC chairs lifes less painful.
 
+This code was written for ISCA-18 by Mario Drumond and Mark Sutherland under the guidance of Babak Falsafi. We used code from the ISCA 17 and Micro 17. The code is still in a crude state and we will clean it out in the near future.
+
 They can be used for the following tasks:
 * Conflict of interest management.
 * Paper assignments.
