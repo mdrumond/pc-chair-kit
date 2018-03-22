@@ -46,6 +46,26 @@ AuthorFirstName AuthorLastName, Instutution2 \n
 ```
 The scripts will interpret everything that does not have a `,` or a `(` before the end of the line as an institution name, and everything else as an author name. Make sure there are no line with multiple institutions/authors. The scripts will ignore authors institutions, therefore, it is enough to end author names with a `,` to make sure the script will recognize them. Keep an eye on names that are common and short, as the cause lots of trouble when matching strings. For the author list, make sure that, for authors with multiple affiliations, you list all the affiliations in the `collaborators` field, as the scripts won't be able to recognize multiple affiliations.
 
+Cleaning up submission data is a time consuming and error prone task, therefore, make sure you have the time to do it. Do not create any deadlines shortly after the submission deadline, as you might find yourself spending days parsing through bad author data. To aid in this task you can use the `collab_format_checker.py` script, that looks for suspicious entries in the collaborator fields. Look at the script for more details.
+
+6. Download and clean PC data. Go to HotCRP `User` page and select the PC. On the bottom of the page, click on `select all` and download `PC info`.
+
+7. Cross check all conflicts. You can do so by running:
+```bash
+python3 cross_reference_conflcits.py INSTITUTIONS_CSV PAPER_DATA PC_INFO PC_PAPERS OUT_PROPER_CONFLICTS PAPER_COLLABS_FIELD_CONFLICTS PC_COLLABS_FIELD_CONFLICTS DBLP_COLLABS_FIELD_CONFLICTS SUSPICIOUS_CONFLICTS
+```
+
+This scripts takes the following inputs:
+* *INSTITUTIONS_CSV* 
+* *PAPER_DATA* 
+* *PC_INFO*
+* *PC_PAPERS*
+* *OUT_PROPER_CONFLICTS*
+* *PAPER_COLLABS_FIELD_CONFLICTS*
+* *PC_COLLABS_FIELD_CONFLICTS*
+* *DBLP_COLLABS_FIELD_CONFLICTS*
+* *SUSPICIOUS_CONFLICTS*
+
 ## Paper assignments
 
 ## Nagging your PC members
