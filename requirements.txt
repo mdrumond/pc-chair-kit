@@ -1,0 +1,6 @@
+tqdm
+xmltodict
+requests
+fuzzywuzzy
+unidecode
+python-Levenshtein
