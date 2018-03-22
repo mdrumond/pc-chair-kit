@@ -31,7 +31,7 @@ This command will generate another CSV file in `AUTHOR_KEYS_FILE` which has all 
 ```bash
 python3 dblp_crawler.py paper-list --author-keys AUTHOR_KEYS_FILE --paper-list PAPER_LIST_FILE
 ```
-This command will generate another CSV file in `PAPER_LIST_FILE` with all the papers authored by each PC member. Your job now is to go through that file and filter out all the bad entries (i.e. papers that do not constitute COI with co-authors), the same way you filtered out the author keys.
+This command will generate another CSV file in `PAPER_LIST_FILE` with all the papers authored by each PC member. Your job now is to go through that file and filter out all the bad entries (i.e. papers that do not constitute COI with co-authors), the same way you filtered out the author keys. After filtering this file, add another column to the file (1st column) with the PC emails. Excel helps performing this task.
 
 4. Generate the co-author list from the paper list. To do so, run:
 ```bash
