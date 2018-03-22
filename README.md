@@ -61,10 +61,10 @@ This scripts takes the following inputs:
 * **PC_INFO** The `.csv` file you you downloaded and cleaned with the PC info
 * **PC_PAPERS** The `.csv` file you generated and filtered with the list of PC papers.
 * **OUT_PROPER_CONFLICTS** The output file with the proper conflicts (the conflicts flagged by authors in the submission form.
-* **PAPER_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected by checking the paper collabs field of the submission
-* **PC_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected by checking the paper collabs field of the PCs
-* **DBLP_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected through DBLP
-* **SUSPICIOUS_CONFLICTS** The output file with conflicts that are flagged by authors but can't be checked elsewhere
+* **OUT_PAPER_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected by checking the paper collabs field of the submission
+* **OUT_PC_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected by checking the paper collabs field of the PCs
+* **OUT_DBLP_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected through DBLP
+* **OUT_SUSPICIOUS_CONFLICTS** The output file with conflicts that are flagged by authors but can't be checked elsewhere
 
 
 ## Paper assignments
