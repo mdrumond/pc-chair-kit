@@ -12,7 +12,7 @@ They can be used for the following tasks:
 * Conflict of interest management for TOT awards.
 
 ## Conflict of interest (COI) management
-EXPLAIN WHY WE USE DBLP
+We check COIs flagged by authors, PC members and we also automatically generate a list of recent co-authors for all PC members using DBLP data. All conflict data can be entered in HotCRP throught he `Assignment` page.
 
 The workflow for checking/flagging COIs between papers and PC members is the following:
 1. Generate a `.csv` with a list of the PC members, with their first and last names. This list have to be manually generated and it has the following format:
@@ -66,6 +66,14 @@ This scripts takes the following inputs:
 * **OUT_DBLP_COLLABS_FIELD_CONFLICTS** The output file with conflicts that are detected through DBLP
 * **OUT_SUSPICIOUS_CONFLICTS** The output file with conflicts that are flagged by authors but can't be checked elsewhere
 
+Check the outputs for bad conflicts. Bad conflicts are normally from common names and very short names.
+After you double check the conflicts csvs, clearing the 'valid' column of the conflicts that are incorrect, you can generate the '.csv' that will be used by HotCRP:
+
+```bash
+python3 report_to_csv OUT_REPORT_CSV OUT_HOTCRP_CSV
+```
+
+You can upload this conflicts from the `Assignment` page in HotCRP.
 
 ## Paper assignments
 
