@@ -1,6 +1,4 @@
 # PC Chair Kit
-
-
 This is a kit to make PC chairs lifes less painful.
 
 They can be used for the following tasks:
@@ -11,6 +9,10 @@ They can be used for the following tasks:
 * Meeting management (if for some reason you can't use HotCRP's awesome meeting tracker).
 * Conflict of interest management for TOT awards.
 
+To start, run:
+```
+python3 -m pip install -r requirements.txt [--user]
+```
 ## Conflict of interest (COI) management
 We check COIs flagged by authors, PC members and we also automatically generate a list of recent co-authors for all PC members using DBLP data. All conflict data can be entered in HotCRP throught he `Assignment` page.
 
